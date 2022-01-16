@@ -6,16 +6,18 @@ from twilio.rest import Client
 STOCK = "TSLA"
 COMPANY_NAME = "Tesla Inc"
 
-stock_api_key = 'STOCK API KEY'
-news_api_key = 'NEWS API KEY'
+stock_api_key = 'SRN0WT9AB0DU631R'
+news_api_key = 'cf0fbaddffc84f8eb34435a9cf94973c'
+
+FROM_NUMBER = "+19125594414"
+TO_NUMBER = "+918825141629"
 
 STOCK_ENDPOINT = "https://www.alphavantage.co/query"
 NEWS_ENDPOINT = "https://newsapi.org/v2/everything"
 
-account_sid = 'TWILLIO ACCOUNT SID'
-auth_token = 'TWILLIO AUTH TOKEN'
+account_sid = 'AC77c77f8a49659ab82c3caac43f3c696e'
+auth_token = '02932c01263aa19419279ce7b412ec2a'
 client = Client(account_sid, auth_token)
-
 
 stock_params = {
     'function': 'TIME_SERIES_DAILY',
@@ -58,6 +60,6 @@ if price_perc >= 1:
         message = client.messages \
             .create(
             body=msg,
-            from_='YOUR TRILIO NUMBER',
-            to='YOUR NUMBER'
+            from_=FROM_NUMBER,
+            to=TO_NUMBER
         )
