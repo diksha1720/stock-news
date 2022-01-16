@@ -6,17 +6,17 @@ from twilio.rest import Client
 STOCK = "TSLA"
 COMPANY_NAME = "Tesla Inc"
 
-stock_api_key = 'SRN0WT9AB0DU631R'
-news_api_key = 'cf0fbaddffc84f8eb34435a9cf94973c'
+stock_api_key = ''
+news_api_key = ''
 
-FROM_NUMBER = "+19125594414"
-TO_NUMBER = "+918825141629"
+FROM_NUMBER = ""
+TO_NUMBER = ""
 
 STOCK_ENDPOINT = "https://www.alphavantage.co/query"
 NEWS_ENDPOINT = "https://newsapi.org/v2/everything"
 
-account_sid = 'AC77c77f8a49659ab82c3caac43f3c696e'
-auth_token = '02932c01263aa19419279ce7b412ec2a'
+account_sid = ''
+auth_token = ''
 client = Client(account_sid, auth_token)
 
 stock_params = {
